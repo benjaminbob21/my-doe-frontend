@@ -1,4 +1,4 @@
-import waterhero from "./ui/waterhero.jpeg";
+import waterhero from "../assets/waterhero.jpeg";
 
 const Whero = () => {
   return (
