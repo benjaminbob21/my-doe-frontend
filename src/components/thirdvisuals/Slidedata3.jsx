@@ -4,7 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import datavis from "../../assets/datavis.jpeg";
+import datavis from "../ui/datavis.jpeg";
 import { Link } from "react-router-dom";
 import { Separator } from "../ui/separator";
 

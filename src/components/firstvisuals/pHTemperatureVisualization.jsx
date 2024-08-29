@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import Plot from "react-plotly.js";
 import axios from "axios";
 
-let API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
-
-if (process.env.NODE_ENV === "production") {
-  API_BASE_URL = "http://3.142.77.97:5000";
-}
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const PhTemperatureVisualization = () => {
   const [data, setData] = useState({ ph: [], temperature: [] });

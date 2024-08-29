@@ -13,6 +13,7 @@ import PhPhmvTemperatureVisualization from "./components/firstvisuals/PhPhmvTemp
 import PhTemperatureVisualization from "./components/firstvisuals/pHTemperatureVisualization";
 import PhPhmvVisualization from "./components/firstvisuals/PhPhmvVisualization";
 import ProtectedRoute from "./contexts/ProtectedRoute";
+import Notprotected from "./contexts/Notprotected";
 import RectangleVisualization2 from "./components/RectangleVisualization2";
 import RectangleVisualization3 from "./components/RectangleVisualization3";
 
@@ -34,22 +35,24 @@ const AppRoutes = () => {
           )
         }
       ></Route>
-      <Route
-        path="sign-in"
-        element={
-          <Layout>
-            <Login />
-          </Layout>
-        }
-      ></Route>
-      <Route
-        path="sign-up"
-        element={
-          <Layout Home>
-            <Register />
-          </Layout>
-        }
-      ></Route>
+      <Route element={<Notprotected />}>
+        <Route
+          path="sign-in"
+          element={
+            <Layout>
+              <Login />
+            </Layout>
+          }
+        ></Route>
+        <Route
+          path="sign-up"
+          element={
+            <Layout Home>
+              <Register />
+            </Layout>
+          }
+        ></Route>
+      </Route>
       <Route path="*" element={<Navigate to="/" />}></Route>
 
       <Route element={<ProtectedRoute />}>

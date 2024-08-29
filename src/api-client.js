@@ -17,11 +17,7 @@
  * @param {RegisterFormData} formData
  */
 
-let API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
-
-if (process.env.NODE_ENV === "production") {
-  API_BASE_URL = "http://3.142.77.97:5000";
-}
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 export const register = async (formData) => {
   const response = await fetch(`${API_BASE_URL}/api/register`, {
