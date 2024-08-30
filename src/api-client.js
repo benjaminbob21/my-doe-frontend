@@ -70,7 +70,7 @@ export const signIn = async (formmData) => {
   const body = await response.json();
 
   if (!response.ok) {
-    throw new Error(`${response.status}: ${body.message || "Login failed"}`;
+    throw new Error(`${response.status}: ${body.message || "Login failed"}`);
   }
 
   return body;
