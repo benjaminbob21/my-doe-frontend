@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Plot from "react-plotly.js";
 import axios from "axios";
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "";
 
 const PhPhmvTemperatureVisualization = () => {
   const [data, setData] = useState([]);
